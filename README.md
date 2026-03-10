@@ -12,7 +12,6 @@ Each paper follows the same structure: **question → discovery → answer.**
 |---|------|----------|------|
 | [01](./01-skills-vs-loaded-files.md) | 2026-03-09 | Are router sub-skills and flat skills equivalent in memory footprint and isolation? | `skills` `context-window` `token-economics` `router-pattern` |
 | [002](./002-overlay-skill-on-the-fly/README.md) | 2026-03-10 | Can task-tracking be injected into any multi-step skill at runtime without touching its SKILL.md? | `overlay-skill` `hooks` `UserPromptSubmit` `execution-mode` `non-determinism` `task-tracking` |
-| [003](./003-skill-checklist-trigger-reliability/README.md) | — | Why does the REQUIRED block fail on multi-skill requests but work on single-skill invocations? | `skill-checklist` `trigger-reliability` `multi-skill` |
 | [004](./004-using-superpowers-compliance-nondeterminism/README.md) | 2026-03-10 | Does Claude reliably apply the using-superpowers skill-checking protocol at the skill-load/execute transition? | `using-superpowers` `execution-mode` `non-determinism` `meta-skill` |
 
 ---
