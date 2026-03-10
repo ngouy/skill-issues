@@ -1,5 +1,7 @@
 # 003 - skill-checklist-trigger-reliability
 
+> **Status: TODO** — This is a research stub, not a published paper. Investigation has not started yet.
+
 ## Question
 Why does the `## Checklist` / REQUIRED block in skills fail to trigger TaskCreate when progressifying multiple skills in one request, but works reliably for single-skill invocations — and what are the trade-offs of making the instruction more aggressive?
 
