@@ -1,0 +1,61 @@
+{
+  "_comment": "Hook configuration added to ~/.claude/settings.json for investigation 002/Mechanism B.",
+  "_note": "Three variants were tested across experiments 06-12. All were reverted after experiments.",
+
+  "variant_1_PreToolUse": {
+    "_experiments": ["06"],
+    "_result": "Did not fire for slash command invocations. Slash commands bypass the Skill tool.",
+    "PreToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/skill-task-injector.sh"
+          }
+        ]
+      }
+    ]
+  },
+
+  "variant_2_UserPromptSubmit_slash_only": {
+    "_experiments": ["07", "08"],
+    "_result": "Worked for slash commands. Natural language not covered.",
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/skill-task-injector.sh"
+          }
+        ]
+      }
+    ]
+  },
+
+  "variant_3_always_on_final": {
+    "_experiments": ["09", "10", "11", "12"],
+    "_result": "Worked for both slash command and natural language. Control (no-step skill) correctly created 0 tasks.",
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/skill-task-injector.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/skill-task-injector.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
